@@ -1,0 +1,299 @@
+<?php
+// BookLa Ticketing Concert System - Interface Showcase Portfolio Template
+// Ideal for resume portfolios and showcasing individual development/design contributions.
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookLa Ticketing System - Interface Walkthrough</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #1e1b4b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --accent-color: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background-color: var(--secondary-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 2rem 1.5rem;
+            color: white;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #e0e7ff;
+        }
+
+        .sidebar p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 280px;
+            padding: 3rem;
+            width: calc(100% - 280px);
+        }
+
+        .header-section {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+        }
+
+        .header-section h1 {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-section .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Highlight Developer Role Box */
+        .dev-role-box {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .dev-role-box h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .dev-role-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .dev-role-box ul {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        .dev-role-box li {
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
+        }
+
+        /* Interface Cards Layout */
+        .interface-card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            padding: 2rem;
+            margin-bottom: 3.5rem;
+            border: 1px solid #e2e8f0;
+            scroll-margin-top: 2rem;
+        }
+
+        .interface-card h2 {
+            color: var(--secondary-color);
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .interface-card h2::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 24px;
+            background-color: var(--primary-color);
+            margin-right: 0.75rem;
+            border-radius: 2px;
+        }
+
+        .interface-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            background-color: #f1f5f9;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            border: 1px dashed #cbd5e1;
+        }
+
+        .interface-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .interface-img:hover {
+            transform: scale(1.01);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation Walkthrough Links -->
+    <div class="sidebar">
+        <h2>BookLa System</h2>
+        <p>VB.NET Visual Programming</p>
+        <ul class="nav-links">
+            <li><a href="#project-overview">Overview & Role</a></li>
+            <li><a href="#main-form">1. Main Form</a></li>
+            <li><a href="#admin-form">2. Admin Form</a></li>
+            <li><a href="#concert-list">3. List of Concerts</a></li>
+            <li><a href="#book-ticket">4. Book Ticket Form</a></li>
+            <li><a href="#buy-ticket">5. Buy Ticket Form</a></li>
+            <li><a href="#receipt">6. System Receipt</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Showcase Content -->
+    <div class="main-content">
+        <div class="header-section">
+            <h1>BookLa Ticketing Concert System</h1>
+            <p class="subtitle">A simplified interface walkthrough simulation designed for a desktop GUI client environment.</p>
+        </div>
+
+        <!-- Project Overview & Individual Contribution Box -->
+        <div class="dev-role-box" id="project-overview">
+            <h3>Key Contributions & Individual Impact</h3>
+            <p>While the baseline idea of building a ticketing solution was a collaborative team choice, I spearheaded the comprehensive technical execution, system architecture, and interface design of the final application. Inspired directly by professional modern ticketing ecosystems like the <strong>GoLive app</strong>, my focus was translating that smooth consumer mobile experience into a fully working VB.NET desktop framework.</p>
+            <ul>
+                <li><strong>UI/UX System Design:</strong> Architected the unified styling guidelines, layout structures, and data flows to mimic a modern digital ticketing agent.</li>
+                <li><strong>Rigorous Testing & Optimization:</strong> Conducted extensive troubleshooting, debugging thousands of compilation errors to ensure absolute transaction stability and flawless multi-form data inheritance.</li>
+            </ul>
+        </div>
+
+        <!-- 1. Main Form -->
+        <div class="interface-card" id="main-form">
+            <h2>Main Form (Gateway Entry)</h2>
+            <p>The system launcher landing screen. Designed to act as the consumer gateway, providing straightforward visual navigation buttons to explore available concert listings while keeping administrative access fields clean, secure, and restricted through a verified credential portal.</p>
+            <div class="image-container">
+                <img src="screenshots/mainform.png" alt="Main Form" class="interface-img">
+            </div>
+        </div>
+
+        <!-- 2. Admin Form -->
+        <div class="interface-card" id="admin-form">
+            <h2>Admin Form (System Operations Panel)</h2>
+            <p>The centralized control hub built strictly for event managers. Features modular structural blocks that separate concert event insertion (handling metadata updates such as date, location, and poster path browsing) from active transactional record management.</p>
+            <div class="image-container">
+                <img src="screenshots/adminform.png" alt="Admin Form" class="interface-img">
+            </div>
+        </div>
+
+        <!-- 3. List of Concerts -->
+        <div class="interface-card" id="concert-list">
+            <h2>List of Concerts (Dynamic Event Feed)</h2>
+            <p>A dynamically rendering layout structure presenting active show listings. Implemented to group rich imagery, distinct calendar times, and explicit location labels cleanly into scannable listing rows, improving immediate information tracking for users.</p>
+            <div class="image-container">
+                <img src="screenshots/concertsform.png" alt="List of Concerts" class="interface-img">
+            </div>
+        </div>
+
+        <!-- 4. Book Ticket -->
+        <div class="interface-card" id="book-ticket">
+            <h2>Book Ticket (Seating Tier Mapping)</h2>
+            <p>The core seat allocation layout. Strongly inspired by clean stage maps used in GoLive, this system translates standard spatial layout rules into selectable tier zones (VIP, Premium, and Standard sections), passing context-relevant, real-time base rates instantly to local parameters.</p>
+            <div class="image-container">
+                <img src="screenshots/bookticket.png" alt="Book Ticket" class="interface-img">
+            </div>
+        </div>
+
+        <!-- 5. Buy Ticket -->
+        <div class="interface-card" id="buy-ticket">
+            <h2>Buy Ticket (Transactional Checkout Pipeline)</h2>
+            <p>The system execution and mathematical processor. Tracks active item limits via operational condition limits, dynamically outputs subtotals combined with exact regional service taxes (6%), and sets up localized sequential seat indexes to handle asynchronous orders securely.</p>
+            <div class="image-container">
+                <img src="screenshots/buyticket.png" alt="Buy Ticket" class="interface-img">
+            </div>
+        </div>
+
+        <!-- 6. Receipt -->
+        <div class="interface-card" id="receipt">
+            <h2>System Receipt (Final Order Generation)</h2>
+            <p>The closing pipeline asset. Emits clean transactional receipts embedded with dynamically processed, random customer identifier numbers, formatted date strings, explicitly mapped line-by-line seating indexes, and formal execution parameters intended for local database commits.</p>
+            <div class="image-container">
+                <img src="screenshots/receipt.png" alt="Receipt" class="interface-img">
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; <?php echo date("Y"); ?> BookLa Ticketing Concert System Portfolio Walkthrough</p>
+        </footer>
+    </div>
+
+</body>
+</html>
