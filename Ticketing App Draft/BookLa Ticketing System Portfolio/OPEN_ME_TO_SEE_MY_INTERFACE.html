@@ -1,22 +1,19 @@
-<?php
-// BookLa Ticketing Concert System - Interface Showcase Portfolio Template
-// Ideal for resume portfolios and showcasing individual development/design contributions.
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookLa Ticketing System - Interface Walkthrough</title>
+    <title>BookLa Ticketing System - Student Dev Journey</title>
     <style>
         :root {
-            --primary-color: #4f46e5;
-            --secondary-color: #1e1b4b;
-            --bg-color: #f8fafc;
+            --primary-color: #ec4899; /* Vibrant Soft Pink */
+            --secondary-color: #4c0519; /* Deep Rose Brown / Burgundy */
+            --bg-color: #fff1f2; /* Soft Rose White Tint */
             --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --accent-color: #f59e0b;
+            --text-main: #4c0519;
+            --text-muted: #9d174d;
+            --accent-color: #f43f5e; /* Coral Pink Aksen */
+            --code-bg: #27272a;
         }
 
         * {
@@ -34,7 +31,7 @@
 
         /* Sidebar Navigation */
         .sidebar {
-            width: 280px;
+            width: 290px;
             height: 100vh;
             background-color: var(--secondary-color);
             position: fixed;
@@ -43,17 +40,18 @@
             padding: 2rem 1.5rem;
             color: white;
             overflow-y: auto;
+            border-right: 3px solid var(--primary-color);
         }
 
         .sidebar h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #e0e7ff;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            color: #ffe4e6;
         }
 
         .sidebar p {
             font-size: 0.85rem;
-            color: #94a3b8;
+            color: #fda4af;
             margin-bottom: 2rem;
         }
 
@@ -66,13 +64,14 @@
         }
 
         .nav-links a {
-            color: #cbd5e1;
+            color: #fecdd3;
             text-decoration: none;
             display: block;
             padding: 0.75rem 1rem;
             border-radius: 0.5rem;
             transition: all 0.3s ease;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
         .nav-links a:hover {
@@ -83,20 +82,20 @@
 
         /* Main Content Area */
         .main-content {
-            margin-left: 280px;
+            margin-left: 290px;
             padding: 3rem;
-            width: calc(100% - 280px);
+            width: calc(100% - 290px);
         }
 
         .header-section {
             margin-bottom: 3rem;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid #fbcfe8;
             padding-bottom: 1.5rem;
         }
 
         .header-section h1 {
             color: var(--secondary-color);
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-bottom: 0.5rem;
         }
 
@@ -105,53 +104,45 @@
             font-size: 1.1rem;
         }
 
-        /* Highlight Developer Role Box */
+        /* Developer Role Box */
         .dev-role-box {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            background: linear-gradient(135deg, #4c0519 0%, #881337 100%);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 1rem;
             margin-bottom: 3.5rem;
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            border-left: 5px solid var(--primary-color);
         }
 
         .dev-role-box h3 {
-            color: var(--accent-color);
-            font-size: 1.3rem;
+            color: #fbcfe8;
+            font-size: 1.4rem;
             margin-bottom: 0.75rem;
         }
 
         .dev-role-box p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #e2e8f0;
-        }
-
-        .dev-role-box ul {
-            margin-top: 1rem;
-            margin-left: 1.5rem;
-        }
-
-        .dev-role-box li {
-            margin-bottom: 0.5rem;
-            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #ffe4e6;
+            margin-bottom: 1rem;
         }
 
         /* Interface Cards Layout */
         .interface-card {
             background-color: var(--card-bg);
             border-radius: 1rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-            padding: 2rem;
-            margin-bottom: 3.5rem;
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(157, 23, 77, 0.05), 0 2px 4px -2px rgba(157, 23, 77, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            border: 1px solid #fbcfe8;
             scroll-margin-top: 2rem;
         }
 
         .interface-card h2 {
             color: var(--secondary-color);
             font-size: 1.6rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
         }
@@ -166,132 +157,251 @@
             border-radius: 2px;
         }
 
-        .interface-card p {
-            color: var(--text-muted);
+        /* Story Subsections */
+        .story-section {
             margin-bottom: 1.5rem;
+        }
+
+        .story-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .story-text {
+            color: #4a0418;
             font-size: 0.95rem;
             line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Code Block Container */
+        .code-container {
+            background-color: var(--code-bg);
+            color: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
         }
 
         .image-container {
-            background-color: #f1f5f9;
+            background-color: #fff5f5;
             border-radius: 0.5rem;
             padding: 1rem;
             text-align: center;
-            border: 1px dashed #cbd5e1;
+            border: 1px dashed #fbcfe8;
+            margin-top: 1.5rem;
         }
 
         .interface-img {
             max-width: 100%;
             height: auto;
             border-radius: 0.25rem;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(76, 5, 25, 0.15);
         }
 
-        .interface-img:hover {
-            transform: scale(1.01);
-        }
-
-        /* Footer */
         footer {
             margin-top: 5rem;
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
+            padding-bottom: 2rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar Navigation Walkthrough Links -->
     <div class="sidebar">
-        <h2>BookLa System</h2>
-        <p>VB.NET Visual Programming</p>
+        <h2>BookLa Ticket Project</h2>
+        <p>CSC301 Visual Programming</p>
         <ul class="nav-links">
-            <li><a href="#project-overview">Overview & Role</a></li>
-            <li><a href="#main-form">1. Main Form</a></li>
-            <li><a href="#admin-form">2. Admin Form</a></li>
-            <li><a href="#concert-list">3. List of Concerts</a></li>
-            <li><a href="#book-ticket">4. Book Ticket Form</a></li>
-            <li><a href="#buy-ticket">5. Buy Ticket Form</a></li>
-            <li><a href="#receipt">6. System Receipt</a></li>
+            <li><a href="#project-overview">My Student Dev Story</a></li>
+            <li><a href="#main-form">1. MainForm & Authentication</a></li>
+            <li><a href="#admin-form">2. Admin CRUD Pipeline</a></li>
+            <li><a href="#concert-list">3. Dynamic Event Feed</a></li>
+            <li><a href="#book-ticket">4. Multi-Form Data Passing</a></li>
+            <li><a href="#buy-ticket">5. Seat Allocation Logic</a></li>
+            <li><a href="#receipt">6. DB Commit & Transaction</a></li>
         </ul>
     </div>
 
-    <!-- Main Showcase Content -->
     <div class="main-content">
         <div class="header-section">
             <h1>BookLa Ticketing Concert System</h1>
-            <p class="subtitle">A simplified interface walkthrough simulation designed for a desktop GUI client environment.</p>
+            <p class="subtitle">A Comprehensive Breakdown of Database Management, UI Interactions, and Logical Implementations.</p>
         </div>
 
-        <!-- Project Overview & Individual Contribution Box -->
         <div class="dev-role-box" id="project-overview">
-            <h3>Key Contributions & Individual Impact</h3>
-            <p>While the baseline idea of building a ticketing solution was a collaborative team choice, I spearheaded the comprehensive technical execution, system architecture, and interface design of the final application. Inspired directly by professional modern ticketing ecosystems like the <strong>GoLive app</strong>, my focus was translating that smooth consumer mobile experience into a fully working VB.NET desktop framework.</p>
-            <ul>
-                <li><strong>UI/UX System Design:</strong> Architected the unified styling guidelines, layout structures, and data flows to mimic a modern digital ticketing agent.</li>
-                <li><strong>Rigorous Testing & Optimization:</strong> Conducted extensive troubleshooting, debugging thousands of compilation errors to ensure absolute transaction stability and flawless multi-form data inheritance.</li>
-            </ul>
+            <h3>Behind the Code:</h3>
+            <p><strong>Hi, I'm Siti Maisarah! As part of my CSC301 Visual Programming coursework</strong>, our group set out to solve a real issue faced by concertgoers: system overloads, hidden transactional prices, and tedious login steps just to get a seat. We wanted to build an ecosystem inspired by platforms like GoLive that provides transparent billing and direct booking streams.</p>
+            <p>Throughout this assignment, I took a major lead in architecting the core operational flow. I was responsible for connecting the front-end user experience directly to our back-end MySQL workbench data structure. Writing robust data mapping pipelines, validating structural parameters, and testing continuous form actions required immense critical problem-solving which successfully brought this full academic system to life!</p>
         </div>
 
-        <!-- 1. Main Form -->
         <div class="interface-card" id="main-form">
-            <h2>Main Form (Gateway Entry)</h2>
-            <p>The system launcher landing screen. Designed to act as the consumer gateway, providing straightforward visual navigation buttons to explore available concert listings while keeping administrative access fields clean, secure, and restricted through a verified credential portal.</p>
+            <h2>1. Main Form & Administrative Security</h2>
+            <div class="story-section">
+                <div class="story-title">The Student Challenge:</div>
+                <div class="story-text">We needed to create a single gateway screen that lets general buyers jump right to current tickets without roadblocks, but simultaneously secures the admin entry path from random client intervention.</div>
+                
+                <div class="story-title">How I Coded It:</div>
+                <div class="story-text">I utilized InputBox prompts that process inputted values into localized strings. By passing the inputs securely using parameter mapping (<code>@email</code> and <code>@password</code>), I prevented SQL Injection vulnerability and intercepted unwanted access before bringing up the dashboard.</div>
+            </div>
+            <div class="code-container">
+' Code Snippet from Project: Intercepting admin access with secure parameter mapping
+Dim email As String = InputBox("Enter Admin Email:", "Security Check")
+Dim password As String = InputBox("Enter Admin Password:", "Security Check")
+Dim cmd As New MySqlCommand("SELECT * FROM Admin WHERE Email=@email AND Password=@password", con)
+cmd.Parameters.AddWithValue("@email", email)
+cmd.Parameters.AddWithValue("@password", password)
+con.Open()
+Dim reader As MySqlDataReader = cmd.ExecuteReader()
+If reader.HasRows Then
+    Admin.Show()
+Else
+    MessageBox.Show("Incorrect email or password.", "Access Denied")
+End If
+            </div>
             <div class="image-container">
                 <img src="screenshot/mainform.png" alt="Main Form" class="interface-img">
             </div>
         </div>
 
-        <!-- 2. Admin Form -->
         <div class="interface-card" id="admin-form">
-            <h2>Admin Form (System Operations Panel)</h2>
-            <p>The centralized control hub built strictly for event managers. Features modular structural blocks that separate concert event insertion (handling metadata updates such as date, location, and poster path browsing) from active transactional record management.</p>
+            <h2>2. Admin Form (Database Mutations)</h2>
+            <div class="story-section">
+                <div class="story-title">The Student Challenge:</div>
+                <div class="story-text">How do we allow system moderators to perform real-time CRUD operations—such as creating event catalogs, inspecting transaction entries, and dropping specific table records safely?</div>
+                
+                <div class="story-title">How I Coded It:</div>
+                <div class="story-text">I built execution functions that handle background connection parameters. The application accepts raw input values, converts raw text into standard MySQL DateTime strings, commits data updates, and refreshes data bindings dynamically across connected grids.</div>
+            </div>
+            <div class="code-container">
+' Code Snippet from Project: Executing transactional data insertions with input format handling
+Dim inputDate As String = txtConcertDate.Text
+Dim parsedDate As DateTime
+If DateTime.TryParse(inputDate, parsedDate) Then
+    Dim Query As String = "INSERT INTO concertlist (ConcertName, ConcertDateTime, ConcertVenue) VALUES (@name, @date, @venue)"
+    Dim cmd As New MySqlCommand(Query, con)
+    cmd.Parameters.AddWithValue("@name", txtConcertName.Text)
+    cmd.Parameters.AddWithValue("@date", parsedDate.ToString("yyyy-MM-dd HH:mm:ss"))
+    cmd.Parameters.AddWithValue("@venue", txtLoc.Text)
+    cmd.ExecuteNonQuery()
+End If
+            </div>
             <div class="image-container">
                 <img src="screenshot/adminform.png" alt="Admin Form" class="interface-img">
             </div>
         </div>
 
-        <!-- 3. List of Concerts -->
         <div class="interface-card" id="concert-list">
-            <h2>List of Concerts (Dynamic Event Feed)</h2>
-            <p>A dynamically rendering layout structure presenting active show listings. Implemented to group rich imagery, distinct calendar times, and explicit location labels cleanly into scannable listing rows, improving immediate information tracking for users.</p>
+            <h2>3. Dynamic Event Feed Layout</h2>
+            <div class="story-section">
+                <div class="story-title">The Student Challenge:</div>
+                <div class="story-text">We didn't want rigid text labels; we wanted an adaptive display board that renders active artist events (like AFGAN, My Chemical Romance, and TREASURE) cleanly using standard dimensions.</div>
+                
+                <div class="story-title">How I Coded It:</div>
+                <div class="story-text">I implemented a centralized loop structure inside a custom method. Whenever the catalog screen changes state, it purges existing control modules and steps through our stored dataset to dynamically inject modular rows containing unique card attributes.</div>
+            </div>
+            <div class="code-container">
+' Code Snippet from Project: Drawing adaptive card layout from dataset loops
+For Each row As DataRow In ConcertData.AllConcerts.Rows
+    Dim img As Image = DirectCast(row("Poster"), Image)
+    AddManualConcert(row("ConcertName").ToString(), "888", "588", "388", row("Date/Time").ToString(), row("Location").ToString(), img)
+Next
+            </div>
             <div class="image-container">
                 <img src="screenshot/concertsform.png" alt="List of Concerts" class="interface-img">
             </div>
         </div>
 
-        <!-- 4. Book Ticket -->
         <div class="interface-card" id="book-ticket">
-            <h2>Book Ticket (Seating Tier Mapping)</h2>
-            <p>The core seat allocation layout. Strongly inspired by clean stage maps used in GoLive, this system translates standard spatial layout rules into selectable tier zones (VIP, Premium, and Standard sections), passing context-relevant, real-time base rates instantly to local parameters.</p>
+            <h2>4. Multi-Form State & Tier Processing</h2>
+            <div class="story-section">
+                <div class="story-title">The Student Challenge:</div>
+                <div class="story-text">When users select a particular localized seating bracket (VIP, Premium, or various Standard layouts), the program needs to retain these values across separate windows without dropping variable contexts.</div>
+                
+                <div class="story-title">How I Coded It:</div>
+                <div class="story-text">I authored structural form properties. When user interaction triggers the submission switch, the program checks conditional radio values, maps pricing properties to internal integer configurations, and transfers the state objects explicitly to the upcoming module instance.</div>
+            </div>
+            <div class="code-container">
+' Code Snippet from Project: Forwarding runtime values directly into explicit object fields
+Dim f As New BuyTicket With {
+    .SelectedArtist = SelectedArtist,
+    .ConcertDate = ConcertDate,
+    .VIP_Price = CInt(VIP_P),
+    .Prem_Price = CInt(Prem_P),
+    .Std_Price = CInt(Std_P),
+    .PreviousForm = Me
+}
+If rdVIP.Checked Then : f.SelectedTier = "VIP"
+ElseIf rdPremium.Checked Then : f.SelectedTier = "Premium"
+End If
+            </div>
             <div class="image-container">
                 <img src="screenshot/bookticket.png" alt="Book Ticket" class="interface-img">
             </div>
         </div>
 
-        <!-- 5. Buy Ticket -->
         <div class="interface-card" id="buy-ticket">
-            <h2>Buy Ticket (Transactional Checkout Pipeline)</h2>
-            <p>The system execution and mathematical processor. Tracks active item limits via operational condition limits, dynamically outputs subtotals combined with exact regional service taxes (6%), and sets up localized sequential seat indexes to handle asynchronous orders securely.</p>
+            <h2>5. Ticket Pricing Pipeline & Seat Allocation</h2>
+            <div class="story-section">
+                <div class="story-title">The Student Challenge:</div>
+                <div class="story-text">Calculating accurate sub-totals, imposing regional service taxes, and generating specific, non-overlapping alpha-numeric seating IDs systematically based on quantity demands.</div>
+                
+                <div class="story-title">How I Coded It:</div>
+                <div class="story-text">I established strict calculation pipelines using explicit casting operators. The total billing statement multiplies quantities against selected properties, applies a <code>0.06</code> floating multiplier for service tax, and utilizes a mathematical base offset loop to auto-generate seat labels.</div>
+            </div>
+            <div class="code-container">
+' Code Snippet from Project: Pricing calculation and incremental seat array allocation
+Dim subtotal As Integer = qty * price
+Dim tax As Double = subtotal * 0.06
+Dim totalAll As Double = subtotal + tax
+
+Dim seats As New List(Of String)
+For i As Integer = 1 To qty
+    If SelectedTier = "VIP" Then
+        seats.Add("V" & (233 + i)) ' Auto-indexes unique seat ranges
+    End If
+Next
+            </div>
             <div class="image-container">
                 <img src="screenshot/buyticket.png" alt="Buy Ticket" class="interface-img">
             </div>
         </div>
 
-        <!-- 6. Receipt -->
         <div class="interface-card" id="receipt">
-            <h2>System Receipt (Final Order Generation)</h2>
-            <p>The closing pipeline asset. Emits clean transactional receipts embedded with dynamically processed, random customer identifier numbers, formatted date strings, explicitly mapped line-by-line seating indexes, and formal execution parameters intended for local database commits.</p>
+            <h2>6. Database Persistence & Receipt Generation</h2>
+            <div class="story-section">
+                <div class="story-title">The Student Challenge:</div>
+                <div class="story-text">Capturing the final checkout values including randomized Customer IDs, explicit purchase timestamps, seat string collection arrays, and transactional pricing and committing them into database records.</div>
+                
+                <div class="story-title">How I Coded It:</div>
+                <div class="story-text">I compressed arrays using a <code>String.Join</code> function to store seat selections as a single delimited column string. Then, using an active connection scope block, I map individual inputs to transactional table values, preserving records securely inside the database structure.</div>
+            </div>
+            <div class="code-container">
+' Code Snippet from Project: Compressing lists and executing database persistence logs
+Dim seatText As String = String.Join(",", SeatNumbers)
+Dim query As String = "INSERT INTO receipt (OrderID, BuyTime, ConcertName, Tier, Quantity, SeatNumber, UnitPrice, Subtotal, Tax, TotalPrice) VALUES (@orderID, @buyTime, @concertName, @tier, @qty, @seats, @unitPrice, @subtotal, @tax, @total)"
+Using cmd As New MySqlCommand(query, con)
+    cmd.Parameters.AddWithValue("@orderID", lblCustomerId.Text)
+    cmd.Parameters.AddWithValue("@seats", seatText)
+    cmd.Parameters.AddWithValue("@total", TotalAll)
+    cmd.ExecuteNonQuery()
+End Using
+            </div>
             <div class="image-container">
                 <img src="screenshot/receipt.png" alt="Receipt" class="interface-img">
             </div>
         </div>
 
         <footer>
-            <p>&copy; <?php echo date("Y"); ?> BookLa Ticketing Concert System Portfolio Walkthrough</p>
+            <p>Designed and Built by Siti Maisarah &copy; CSC301 Visual Programming Project Showcase</p>
         </footer>
     </div>
 
