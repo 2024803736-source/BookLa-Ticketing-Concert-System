@@ -25,22 +25,22 @@ Built as part of CSC301 Visual Programming coursework.
 ## 📸 Screenshots
 
 ### Main Form
-![Main Form](BookLa Ticketing System Portfolio/screenshot/mainform.png)
+![Main Form](screenshot/mainform.png)
 
 ### Admin Form
-![Admin Form](BookLa Ticketing System Portfolio/screenshot/adminform.png)
+![Admin Form](screenshot/adminform.png)
 
 ### Concert List
-![Concerts](BookLa Ticketing System Portfolio/screenshot/concertsform.png)
+![Concerts](screenshot/concertsform.png)
 
 ### Book Ticket
-![Book Ticket](BookLa Ticketing System Portfolio/screenshot/bookticket.png)
+![Book Ticket](screenshot/bookticket.png)
 
 ### Buy Ticket
-![Buy Ticket](BookLa Ticketing System Portfolio/screenshot/buyticket.png)
+![Buy Ticket](screenshot/buyticket.png)
 
 ### Receipt
-![Receipt](BookLa Ticketing System Portfolio/screenshot/receipt.png)
+![Receipt](screenshot/receipt.png)
 
 
 ## 👩‍💻 My Role
