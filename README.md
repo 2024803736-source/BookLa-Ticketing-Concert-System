@@ -90,14 +90,6 @@ Built as part of CSC301 Visual Programming coursework.
 
 ## 👩‍💻 My Role
 
-- Designed database ERD & login system
-
-- Implemented CRUD pipeline for concerts
-
-- Built dynamic seat allocation & pricing logic
-
-- Integrated receipt saving into MySQL
-
 - Situation: As Team Leader, I aimed to design an interface inspired by platforms like GoLive, showcasing preset default concerts alongside live, upcoming items added dynamically by system admins.
 
 - Task: The core challenge was synchronizing image, time, and date parameters seamlessly. Databases store raw text strings and binary images, causing layout misalignments or failed interface updates on the user's view in real-time.
