@@ -23,23 +23,25 @@ Built as part of CSC301 Visual Programming coursework.
 4. Use Admin login to manage concerts.
 
 ## 📸 Screenshots
+
 ### Main Form
-![Main Form](screenshot/mainform.png)
+![Main Form](BookLa Ticketing System/screenshot/mainform.png)
 
 ### Admin Form
-![Admin Form](screenshot/adminform.png)
+![Admin Form](BookLa Ticketing System/screenshot/adminform.png)
 
 ### Concert List
-![Concerts](screenshot/concertsform.png)
+![Concerts](BookLa Ticketing System/screenshot/concertsform.png)
 
 ### Book Ticket
-![Book Ticket](screenshot/bookticket.png)
+![Book Ticket](BookLa Ticketing System/screenshot/bookticket.png)
 
 ### Buy Ticket
-![Buy Ticket](screenshot/buyticket.png)
+![Buy Ticket](BookLa Ticketing System/screenshot/buyticket.png)
 
 ### Receipt
-![Receipt](screenshot/receipt.png)
+![Receipt](BookLa Ticketing System/screenshot/receipt.png)
+
 
 ## 👩‍💻 My Role
 - Designed database ERD & login system
